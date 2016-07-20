@@ -58,3 +58,104 @@ var newArea = images.map(function(image) {
 });
 
 console.log(newArea);
+
+
+var cars = [
+  {
+	  model: 'buick',
+    price: 'CHEAP'
+  },
+  {
+    model: 'Camero',
+    price: 'Expensive'
+  }
+];
+
+//example of plucking
+var prices = cars.map(function(car) {
+  return car.price;
+});
+
+console.log(prices);
+
+function pluck(array, property) {
+    var items = array.map(function(item) {
+        return item[property];
+    });
+    
+    console.log(items);
+}
+var paints = [ { color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
+pluck(paints, 'color');
+
+
+//Filter example
+var products = [
+  {
+    name: 'soda',
+    price: 2.00,
+    qty: 1
+  },
+  {
+    name: 'candy',
+    price: 2.00,
+    qty: 0
+  },
+  {
+    name: 'medicine',
+    price: 1.00,
+    qty: 14
+  },
+  {
+    name: 'game',
+    price: 1.00,
+    qty: 15
+  },
+];
+
+var filteredProducts = [];
+
+//old way
+for (var i = 0; i < products.length; i++) {
+  if (products[i].price === 1.00) {
+    filteredProducts.push(products[i]);
+  }
+}
+
+console.log(filteredProducts);
+
+//ES6 way
+products.filter(function(product){
+  return product.price === 2;
+});
+
+//more advanced filter
+var filteredProducts = products.filter(function(product) {
+  return product.price > 1 && product.qty > 0;
+});
+
+console.log(filteredProducts);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
