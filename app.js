@@ -136,7 +136,46 @@ var filteredProducts = products.filter(function(product) {
 
 console.log(filteredProducts);
 
+// Find Method
+var users = [
+  {name:'Alex'},
+  {name:'Jill'},
+  {name:'Kim'}
+];
+var user;
 
+//old way
+for (var i = 0; i < users.length; i++) {
+  if (users[i].name === 'Alex') {
+    user = users[i];
+    break;
+  }
+}
+
+console.log(user);
+// ES6 way
+user = users.find(function(user) {
+  return user.name === 'Alex';
+});
+
+console.log(user);
+
+// a practical example of using the find method
+var posts = [
+  {id: 1, title: 'Post One'},
+  {id: 2, title: 'Post Two'},
+  {id: 3, title: 'Post Three'},
+];
+
+var comment = {postId: 1, content: 'Great Post'};
+
+function postForComment(posts, comment) {
+  return posts.find(function(post) {
+    return post.id === comment.postId;
+  });
+}
+
+console.log(postForComment(posts, comment));
 
 
 
