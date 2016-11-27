@@ -1,8 +1,8 @@
 //Array Helpers
 
 //forEach
-
 const colors = ['red', 'blue', 'green'];
+
 //old way
 for (var i = 0; i < colors.length; i++) {
   console.log(colors[i]);
@@ -59,7 +59,6 @@ var newArea = images.map(function(image) {
 
 console.log(newArea);
 
-
 var cars = [
   {
 	  model: 'buick',
@@ -85,9 +84,8 @@ function pluck(array, property) {
     
     console.log(items);
 }
-var paints = [ { color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
+var paints = [{ color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
 pluck(paints, 'color');
-
 
 //Filter example
 var products = [
@@ -176,6 +174,62 @@ function postForComment(posts, comment) {
 }
 
 console.log(postForComment(posts, comment));
+
+var accounts = [
+  { balance: -10 },
+  { balance: 12 },
+  { balance: 0 }
+];
+
+var account;
+
+account = accounts.find(function(account) {
+   return  account.balance === 12;
+});
+
+console.log(account);
+
+// Every Method
+
+var computers = [
+    {name: "Apple", ram: 24},
+    {name: "Compaq", ram: 4},
+    {name: "Acer", ram: 32}
+];
+
+var allComputersCanRunProgram = true;
+var onlySomeComputersCanRunProgram = false;
+
+//old way
+for (var i = 0; i < computers.length; i++) {
+    var computer = computers[i];
+    
+    if (computer.ram < 16) {
+        allComputersCanRunProgram = false;
+    } else {
+        onlySomeComputersCanRunProgram = true;
+    }
+}
+
+console.log(allComputersCanRunProgram);
+console.log(onlySomeComputersCanRunProgram);
+
+allComputersCanRunProgram = computers.every(function(computer){
+   return computer.ram > 16;
+});
+
+onlySomeComputersCanRunProgram = computers.some(function(computer){
+   return computer.ram > 16;
+});
+
+console.log(allComputersCanRunProgram);
+console.log(onlySomeComputersCanRunProgram);
+
+
+
+
+
+
 
 
 
