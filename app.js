@@ -189,7 +189,7 @@ account = accounts.find(function(account) {
 
 console.log(account);
 
-// Every Method
+// Every & Some Method
 
 var computers = [
     {name: "Apple", ram: 24},
@@ -224,6 +224,73 @@ onlySomeComputersCanRunProgram = computers.some(function(computer){
 
 console.log(allComputersCanRunProgram);
 console.log(onlySomeComputersCanRunProgram);
+
+var namesStrings = [
+    "John",
+    "Peter",
+    "Alexa",
+    "Danny"
+];
+
+var isNameLong = namesStrings.every(function(name){
+   return name.length > 4;
+});
+
+var isAnyNameLong = namesStrings.some(function(name){
+   return name.length > 4;
+});
+
+console.log("isNameLong " + isNameLong);
+console.log("isAnyNameLong " + isAnyNameLong);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
