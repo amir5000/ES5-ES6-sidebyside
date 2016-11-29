@@ -189,8 +189,8 @@ account = accounts.find(function(account) {
 
 console.log(account);
 
-// Every & Some Method
 
+// Every & Some Method
 var computers = [
     {name: "Apple", ram: 24},
     {name: "Compaq", ram: 4},
@@ -243,7 +243,22 @@ var isAnyNameLong = namesStrings.some(function(name){
 console.log("isNameLong " + isNameLong);
 console.log("isAnyNameLong " + isAnyNameLong);
 
+// reduce method
+var numbers = [10, 20, 30];
+var sum = 0;
 
+//old way
+for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+
+console.log(sum);
+
+numbers.reduce(function(sum, number) {
+    return sum + number;
+}, 0);
+
+console.log("reduce method: " +  sum);
 
 
 
