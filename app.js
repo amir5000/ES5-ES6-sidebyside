@@ -260,9 +260,19 @@ numbers.reduce(function(sum, number) {
 
 console.log("reduce method: " +  sum);
 
+var primaryColors = [
+    {color: "Red"},
+    {color: "Blue"},
+    {color: "Green"}
+];
+var previous = [];
 
+previous = primaryColors.reduce(function(previous, primaryColor) {
+    previous.push(primaryColor.color);    
+    return previous;
+}, []);
 
-
+console.log(previous);
 
 
 
