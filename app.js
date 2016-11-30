@@ -303,6 +303,18 @@ var deskTypes = desks.reduce(function(previous, desk) {
 
 console.log(deskTypes);
 
+function unique(array) {
+  return array.reduce(function(previous, number) {      
+        var findNum = previous.find(function(num) {
+            return num === number;
+        });      
+        if (!findNum) {previous.push(number)}   
+        return previous;
+  }, []);
+}
+
+var numbers = [1, 1, 2, 3, 4, 4];
+console.log(unique(numbers));
 
 
 
