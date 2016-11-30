@@ -254,7 +254,7 @@ for (var i = 0; i < numbers.length; i++) {
 
 console.log(sum);
 
-numbers.reduce(function(sum, number) {
+sum = numbers.reduce(function(sum, number) {
     return sum + number;
 }, 0);
 
@@ -287,6 +287,21 @@ function balancedParens(string) {
 console.log(balancedParens("(())"));
 console.log(balancedParens(")("));
 
+var desks = [
+  { type: 'sitting' },
+  { type: 'standing' },
+  { type: 'sitting' },
+  { type: 'sitting' },
+  { type: 'standing' }
+];
+
+var deskTypes = desks.reduce(function(previous, desk) {
+    if (desk.type === 'sitting') {++previous.sitting};
+    if (desk.type === 'standing') {++previous.standing};
+    return previous;
+}, { sitting: 0, standing: 0 });
+
+console.log(deskTypes);
 
 
 
