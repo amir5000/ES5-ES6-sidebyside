@@ -222,8 +222,8 @@ onlySomeComputersCanRunProgram = computers.some(function(computer){
    return computer.ram > 16;
 });
 
-console.log(allComputersCanRunProgram);
-console.log(onlySomeComputersCanRunProgram);
+console.log('using every: ' + allComputersCanRunProgram);
+console.log('using some: ' + onlySomeComputersCanRunProgram);
 
 var namesStrings = [
     "John",
@@ -274,7 +274,7 @@ previous = primaryColors.reduce(function(previous, primaryColor) {
 
 console.log(previous);
 
-//More practical example of reduce.
+//More practical example of reduce to solve balancedParens problem.
 function balancedParens(string) {
     return !string.split("").reduce(function(previous, char) {
         if (previous < 0) { return previous; } 
@@ -303,6 +303,7 @@ var deskTypes = desks.reduce(function(previous, desk) {
 
 console.log(deskTypes);
 
+var numbers = [1, 1, 2, 3, 4, 4];
 function unique(array) {
   return array.reduce(function(previous, number) {      
         var findNum = previous.find(function(num) {
@@ -313,7 +314,6 @@ function unique(array) {
   }, []);
 }
 
-var numbers = [1, 1, 2, 3, 4, 4];
 console.log(unique(numbers));
 
 
