@@ -7,13 +7,13 @@ const colors = ['red', 'blue', 'green'];
 
 //old way
 for (var i = 0; i < colors.length; i++) {
-  console.log(`${colors[i]} Using old for loop`);
+  console.log(`${colors[i]} - Using old for loop`);
 }
 
 //ES6 way
 console.log('----------------------------- ES6 forEach -----------------------------');
 colors.forEach(function(color) {
-  console.log(`${color} Using forEach Array helper to output all the values in an array`);
+  console.log(`${color} - Using forEach Array helper to output all the values in an array`);
 });
 
 var numbers = [1,2,3,4,5];
@@ -22,7 +22,7 @@ function adder(number) {
   sum += number
 }
 numbers.forEach(adder);
-console.log(sum);
+console.log(`${sum} - Using forEach to get the sum of an array.`);
 
 var images = [
   { height: 10, width: 30 },
@@ -37,7 +37,7 @@ images.forEach(function(image) {
     areas.push(area);
 });
 
-console.log(areas);
+console.log(`[${areas}] - Using forEach to loop and the push to a new array the total area of the images.`);
 
 //map
 
