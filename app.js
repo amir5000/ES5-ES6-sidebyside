@@ -1,16 +1,19 @@
 //Array Helpers
+console.log('----------------------------- Array Helpers -----------------------------');
 
 //forEach
+console.log('----------------------------- ES5 forEach -----------------------------');
 const colors = ['red', 'blue', 'green'];
 
 //old way
 for (var i = 0; i < colors.length; i++) {
-  console.log(colors[i]);
+  console.log(`${colors[i]} Using old for loop`);
 }
 
 //ES6 way
+console.log('----------------------------- ES6 forEach -----------------------------');
 colors.forEach(function(color) {
-  console.log(color);
+  console.log(`${color} Using forEach Array helper to output all the values in an array`);
 });
 
 var numbers = [1,2,3,4,5];
