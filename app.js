@@ -67,10 +67,12 @@ var newArea = images.map(function(image) {
 
 console.log(`[${newArea}] - Using map instead of forEach is simpler and less code and is faster.`);
 
+//example of plucking
+console.log('----------------------------- Using map to pluck values from an array of objects -----------------------------');
 var cars = [
   {
 	  model: 'buick',
-    price: 'CHEAP'
+      price: 'Cheap'
   },
   {
     model: 'Camero',
@@ -78,7 +80,7 @@ var cars = [
   }
 ];
 
-//example of plucking
+
 var prices = cars.map(function(car) {
   return car.price;
 });
