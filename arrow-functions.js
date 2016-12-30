@@ -16,3 +16,13 @@ console.log(`${double(8)} in this example we omit the perenthesis from the singl
 
 const numbers123 = [1,2,3];
 console.log(`[${numbers123.map(number => 2 * number)}] - using arrow function with an array helper.`);
+
+const devTeam = {
+    members: ['Jill', 'Bill'],
+    teamName: 'Power Rangers!',
+    teamSummary: function() {
+        return this.members.map(member => `${member} is on team ${this.teamName}` );
+    }
+};
+
+console.log(`[${devTeam.teamSummary()}] - Using arrow function we autobind the 'this' variable and keep the correct context to the map function instead of using .bind(this).`);
