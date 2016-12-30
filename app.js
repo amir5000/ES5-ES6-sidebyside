@@ -40,27 +40,32 @@ images.forEach(function(image) {
 console.log(`[${areas}] - Using forEach to loop and the push to a new array the total area of the images.`);
 
 //map
+console.log('----------------------------- Old for loop -----------------------------');
 
 var numbers = [1,2,3];
 var doubleNumbers = [];
+
 //old way
 for (var i = 0; i < numbers.length; i++) {
   doubleNumbers.push(numbers[i] *2);
 }
+console.log(`[${doubleNumbers}] - Using old for loop to double each number and then push into an array.`);
+
 //ES6 way
+console.log('----------------------------- New map helper for looping -----------------------------');
 var doubled = numbers.map(function(number) {
   return number * 2;
 });
+console.log(`[${doubled}] - Using map array helper to loop through and double each number and automatically return an array with the new values.`);
 
-console.log(doubled);
-console.log(doubleNumbers);
 
 // implemented previous example in map instead of forEach for correct way of using the correct array helper method
+console.log('----------------------------- Using map to replace the forEach method above -----------------------------');
 var newArea = images.map(function(image) {
     return image.height * image.width;
 });
 
-console.log(newArea);
+console.log(`[${newArea}] - Using map instead of forEach is simpler and less code and is faster.`);
 
 var cars = [
   {
