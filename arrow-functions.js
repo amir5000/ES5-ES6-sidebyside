@@ -40,4 +40,4 @@ const profile = {
     }
 };
 
-console.log(`${profile.getNameOldFunction()} ${profile.getNameNewArrowFunction()} ${profile.prop.getNameNewArrowFunctionInOneExtraLayer()} even nesting deeper in another object doesn't work because we are still invocing the function in the window context.`);
+console.log(`${profile.getNameOldFunction()} ${profile.getNameNewArrowFunction()} ${profile.prop.getNameNewArrowFunctionInOneExtraLayer()} I nested another object to try it at a deeper level to confirm that its context is still on this level (window) and does not change with nesting in objects.`);

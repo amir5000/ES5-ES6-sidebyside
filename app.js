@@ -94,8 +94,9 @@ function pluck(array, property) {
     console.log(items);
 }
 var paints = [{ color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
-pluck(paints, 'color');
+console.log(`${pluck(paints, 'color')} - Using map to create a function that is reusable to pluck away a key/value pair from an array of objects.`);
 
+console.log('----------------------------- Using filter array helper -----------------------------');
 //Filter example
 var products = [
   {
