@@ -26,3 +26,18 @@ const devTeam = {
 };
 
 console.log(`[${devTeam.teamSummary()}] - Using arrow function we autobind the 'this' variable and keep the correct context to the map function instead of using .bind(this).`);
+
+var devName = 'David';
+const profile = {
+    devName: 'Alex',
+    getNameOldFunction: function() {
+        return this.devName
+    },
+    getNameNewArrowFunction: () => this.devName, // this context is window.
+    prop: {
+        devName: 'Amir',
+        getNameNewArrowFunctionInOneExtraLayer: () => this.devName
+    }
+};
+
+console.log(`${profile.getNameOldFunction()} ${profile.getNameNewArrowFunction()} ${profile.prop.getNameNewArrowFunctionInOneExtraLayer()} even nesting deeper in another object doesn't work because we are still invocing the function in the window context.`);

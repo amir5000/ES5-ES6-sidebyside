@@ -80,7 +80,6 @@ var cars = [
   }
 ];
 
-
 var prices = cars.map(function(car) {
   return car.price;
 });
