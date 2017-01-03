@@ -84,17 +84,16 @@ var prices = cars.map(function(car) {
   return car.price;
 });
 
-console.log(prices);
+console.log(`[${prices}] - Old ES5 way`);
 
 function pluck(array, property) {
     var items = array.map(function(item) {
         return item[property];
     });
-    
-    console.log(items);
+    return items;
 }
 var paints = [{ color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
-console.log(`${pluck(paints, 'color')} - Using map to create a function that is reusable to pluck away a key/value pair from an array of objects.`);
+console.log(`[${pluck(paints, 'color')}] - Using map to create a function that is reusable to pluck away a key/value pair from an array of objects.`);
 
 console.log('----------------------------- Using filter array helper -----------------------------');
 //Filter example
@@ -130,7 +129,7 @@ for (var i = 0; i < products.length; i++) {
   }
 }
 
-console.log(filteredProducts);
+console.log(`[${filteredProducts}] `);
 
 //ES6 way
 products.filter(function(product){
