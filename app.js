@@ -129,21 +129,24 @@ for (var i = 0; i < products.length; i++) {
   }
 }
 
-console.log(`[${filteredProducts}] - Old ES5 way`);
+console.log(` --------- Old ES5 way`);
+console.log(filteredProducts);
 
 //ES6 way
 const filterPrice = products.filter(function(product){
   return product.price === 2;
 });
-console.log(filterPrice);
+
 console.log(` --------- Using .filter() to check products and return curated list that meets the requirements`);
+console.log(filterPrice);
 
 //more advanced filter
 filteredProducts = products.filter(function(product) {
   return product.price > 1 && product.qty > 0;
 });
-console.log(filteredProducts);
+
 console.log(` --------- Using .filter() to check products and return curated list that meets the requirements.`);
+console.log(filteredProducts);
 
 // Find Method
 var users = [
@@ -169,7 +172,7 @@ user = users.find(function(user) {
   return user.name === 'Alex';
 });
 
-console.log(`${user.name} - Using .find() to to return the one that matched the expression.`);
+console.log(`${user.name} - Using .find() to return the one that matched the expression.`);
 
 // a practical example of using the find method
 var posts = [
@@ -185,7 +188,7 @@ function postForComment(posts, comment) {
     return post.id === comment.postId;
   });
 }
-
+console.log(` --------- Using .find() to for a more complex example to return the one that matched the expression.`);
 console.log(postForComment(posts, comment));
 
 var accounts = [
