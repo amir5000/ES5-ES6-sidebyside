@@ -165,14 +165,16 @@ for (var i = 0; i < users.length; i++) {
   }
 }
 
-console.log(`${user.name} - Old ES5 way`);
+console.log(` --------- Old ES5 way`);
+console.log(user);
 
 // ES6 way
 user = users.find(function(user) {
   return user.name === 'Alex';
 });
 
-console.log(`${user.name} - Using .find() to return the one that matched the expression.`);
+console.log(` --------- Using .find() to return the one that matched the checked value.`);
+console.log(user);
 
 // a practical example of using the find method
 var posts = [
@@ -188,7 +190,7 @@ function postForComment(posts, comment) {
     return post.id === comment.postId;
   });
 }
-console.log(` --------- Using .find() to for a more complex example to return the one that matched the expression.`);
+console.log(` --------- Using .find() to for a more complex example to return the one that matched the checked value.`);
 console.log(postForComment(posts, comment));
 
 var accounts = [
@@ -197,14 +199,12 @@ var accounts = [
   { balance: 0 }
 ];
 
-var account;
-
-account = accounts.find(function(account) {
+var account = accounts.find(function(account) {
    return  account.balance === 12;
 });
 
+console.log(` --------- Using .find() to return the one that matched the checked value.`);
 console.log(account);
-
 
 // Every & Some Method
 var computers = [
