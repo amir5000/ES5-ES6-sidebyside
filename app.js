@@ -120,7 +120,7 @@ var products = [
   },
 ];
 
-var filteredProducts = [];
+let filteredProducts = [];
 
 //old way
 for (var i = 0; i < products.length; i++) {
@@ -129,19 +129,21 @@ for (var i = 0; i < products.length; i++) {
   }
 }
 
-console.log(`[${filteredProducts}] `);
+console.log(`[${filteredProducts}] - Old ES5 way`);
 
 //ES6 way
-products.filter(function(product){
+const filterPrice = products.filter(function(product){
   return product.price === 2;
 });
+console.log(filterPrice);
+console.log(` --------- Using .filter() to check products and return curated list that meets the requirements`);
 
 //more advanced filter
-var filteredProducts = products.filter(function(product) {
+filteredProducts = products.filter(function(product) {
   return product.price > 1 && product.qty > 0;
 });
-
 console.log(filteredProducts);
+console.log(` --------- Using .filter() to check products and return curated list that meets the requirements.`);
 
 // Find Method
 var users = [
