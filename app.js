@@ -151,6 +151,7 @@ var users = [
   {name:'Jill'},
   {name:'Kim'}
 ];
+
 var user;
 
 //old way
@@ -161,13 +162,14 @@ for (var i = 0; i < users.length; i++) {
   }
 }
 
-console.log(user);
+console.log(`${user.name} - Old ES5 way`);
+
 // ES6 way
 user = users.find(function(user) {
   return user.name === 'Alex';
 });
 
-console.log(user);
+console.log(`${user.name} - Using .find() to to return the one that matched the expression.`);
 
 // a practical example of using the find method
 var posts = [
