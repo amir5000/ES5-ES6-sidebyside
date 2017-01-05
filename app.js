@@ -1,8 +1,8 @@
 //Array Helpers
-console.log('----------------------------- Array Helpers -----------------------------');
+console.log('------------ Array Helpers ---------------------------------------------------------------------------------');
 
 //forEach
-console.log('----------------------------- ES5 forEach -----------------------------');
+console.log('------------ ES5 forEach -----------------------------------------------------------------------------------');
 const colors = ['red', 'blue', 'green'];
 
 //old way
@@ -11,7 +11,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 
 //ES6 way
-console.log('----------------------------- ES6 forEach -----------------------------');
+console.log('------------ ES6 forEach -----------------------------------------------------------------------------------');
 colors.forEach(function(color) {
   console.log(`${color} - Using forEach Array helper to output all the values in an array`);
 });
@@ -40,7 +40,7 @@ images.forEach(function(image) {
 console.log(`[${areas}] - Using forEach to loop and the push to a new array the total area of the images.`);
 
 //map
-console.log('----------------------------- Old for loop -----------------------------');
+console.log('------------ Old for loop ----------------------------------------------------------------------------------');
 
 var numbers = [1,2,3];
 var doubleNumbers = [];
@@ -52,7 +52,7 @@ for (var i = 0; i < numbers.length; i++) {
 console.log(`[${doubleNumbers}] - Using old for loop to double each number and then push into an array.`);
 
 //ES6 way
-console.log('----------------------------- New map helper for looping -----------------------------');
+console.log('------------ New map helper for looping --------------------------------------------------------------------');
 var doubled = numbers.map(function(number) {
   return number * 2;
 });
@@ -60,7 +60,7 @@ console.log(`[${doubled}] - Using map array helper to loop through and double ea
 
 
 // implemented previous example in map instead of forEach for correct way of using the correct array helper method
-console.log('----------------------------- Using map to replace the forEach method above -----------------------------');
+console.log('------------ Using map to replace the forEach method above -------------------------------------------------');
 var newArea = images.map(function(image) {
     return image.height * image.width;
 });
@@ -68,7 +68,7 @@ var newArea = images.map(function(image) {
 console.log(`[${newArea}] - Using map instead of forEach is simpler and less code and is faster.`);
 
 //example of plucking
-console.log('----------------------------- Using map to pluck values from an array of objects -----------------------------');
+console.log('------------ Using map to pluck values from an array of objects --------------------------------------------');
 var cars = [
   {
 	  model: 'buick',
@@ -95,7 +95,7 @@ function pluck(array, property) {
 var paints = [{ color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
 console.log(`[${pluck(paints, 'color')}] - Using map to create a function that is reusable to pluck away a key/value pair from an array of objects.`);
 
-console.log('----------------------------- Using filter array helper -----------------------------');
+console.log('------------ Using filter array helper ---------------------------------------------------------------------');
 //Filter example
 var products = [
   {
@@ -129,7 +129,7 @@ for (var i = 0; i < products.length; i++) {
   }
 }
 
-console.log(` --------- Old ES5 way`);
+console.log(` ------------ Old ES5 way`);
 console.log(filteredProducts);
 
 //ES6 way
@@ -137,7 +137,7 @@ const filterPrice = products.filter(function(product){
   return product.price === 2;
 });
 
-console.log(` --------- Using .filter() to check products and return curated list that meets the requirements`);
+console.log(` ------------ Using .filter() to check products and return curated list that meets the requirements`);
 console.log(filterPrice);
 
 //more advanced filter
@@ -145,9 +145,10 @@ filteredProducts = products.filter(function(product) {
   return product.price > 1 && product.qty > 0;
 });
 
-console.log(` --------- Using .filter() to check products and return curated list that meets the requirements.`);
+console.log(` ------------ Using .filter() to check products and return curated list that meets the requirements.`);
 console.log(filteredProducts);
 
+console.log('------------ Using Find array helper -----------------------------------------------------------------------');
 // Find Method
 var users = [
   {name:'Alex'},
@@ -165,7 +166,7 @@ for (var i = 0; i < users.length; i++) {
   }
 }
 
-console.log(` --------- Old ES5 way`);
+console.log(` ------------ Old ES5 way`);
 console.log(user);
 
 // ES6 way
@@ -173,7 +174,7 @@ user = users.find(function(user) {
   return user.name === 'Alex';
 });
 
-console.log(` --------- Using .find() to return the one that matched the checked value.`);
+console.log(` ------------ Using .find() to return the one that matched the checked value.`);
 console.log(user);
 
 // a practical example of using the find method
@@ -190,7 +191,7 @@ function postForComment(posts, comment) {
     return post.id === comment.postId;
   });
 }
-console.log(` --------- Using .find() to for a more complex example to return the one that matched the checked value.`);
+console.log(` ------------ Using .find() to for a more complex example to return the one that matched the checked value.`);
 console.log(postForComment(posts, comment));
 
 var accounts = [
@@ -203,7 +204,7 @@ var account = accounts.find(function(account) {
    return  account.balance === 12;
 });
 
-console.log(` --------- Using .find() to return the one that matched the checked value.`);
+console.log(` ------------ Using .find() to return the one that matched the checked value.`);
 console.log(account);
 
 // Every & Some Method

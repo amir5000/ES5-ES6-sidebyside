@@ -1,4 +1,4 @@
-console.log('----------------------------- Variables -----------------------------');
+console.log('------------ Variables -------------------------------------------------------------------------------------');
 
 //------------ ES5
 var nameOld = 'Jane';
@@ -16,7 +16,7 @@ hourlyWageNew = 40;
 console.log('const nameNew = \'Jane\'; When the variable isn\'t expected to change throughout the lifespan of the application. ');
 console.log('let titleNew = \'Software Engineer\' When the variable is expected to change at some point in the application. This is similar to the old var variable.');
 
-console.log('----------------------------- Advanced Variables -----------------------------');
+console.log('------------ Advanced Variables ----------------------------------------------------------------------------');
 let tt = "tt";
 var dd = "dd"
 console.log(`${tt} declared the let`);
