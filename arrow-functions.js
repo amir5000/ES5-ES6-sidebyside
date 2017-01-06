@@ -27,17 +27,20 @@ const devTeam = {
 
 console.log(`[${devTeam.teamSummary()}] - Using arrow function we autobind the 'this' variable and keep the correct context to the map function instead of using .bind(this).`);
 
-var devName = 'David';
+const devName = 'David';
+
 const profile = {
     devName: 'Alex',
-    getNameOldFunction: function() {
-        return this.devName
+    getNameNewArrowFunction() {
+        return this.devName;
     },
-    getNameNewArrowFunction: () => this.devName, // this context is window.
     prop: {
         devName: 'Amir',
-        getNameNewArrowFunctionInOneExtraLayer: () => this.devName
+        getNameNewArrowFunctionInOneExtraLayer() {
+            return this.devName;
+        }
     }
 };
 
-console.log(`${profile.getNameOldFunction()} ${profile.getNameNewArrowFunction()} ${profile.prop.getNameNewArrowFunctionInOneExtraLayer()} nesting the arrow function in another object to try it at a deeper level to confirm that its context is still on this level (window) and does not change with nesting in objects.`);
+console.log('------------ Different ways of showing the this context inside different objects.');
+console.log(profile.getNameNewArrowFunction(), profile.prop.getNameNewArrowFunctionInOneExtraLayer());
