@@ -235,12 +235,15 @@ allComputersCanRunProgram = computers.every(function(computer){
    return computer.ram > 16;
 });
 
+console.log(` ------------ Using .every() to check all values and only when all return true the function returns true.`);
+console.log(allComputersCanRunProgram);
+
 onlySomeComputersCanRunProgram = computers.some(function(computer){
    return computer.ram > 16;
 });
 
-console.log('using every: ' + allComputersCanRunProgram);
-console.log('using some: ' + onlySomeComputersCanRunProgram);
+console.log(` ------------ Using .some() to check all values and when any return true then the function returns true.`);
+console.log(onlySomeComputersCanRunProgram);
 
 var namesStrings = [
     "John",
@@ -250,15 +253,18 @@ var namesStrings = [
 ];
 
 var isNameLong = namesStrings.every(function(name){
-   return name.length > 4;
+   return name.length > 3;
 });
+
+console.log(` ------------ Using .every() to check all values and only when all return true the function returns true.`);
+console.log(isNameLong);
 
 var isAnyNameLong = namesStrings.some(function(name){
-   return name.length > 4;
+   return name.length > 5;
 });
 
-console.log("isNameLong " + isNameLong);
-console.log("isAnyNameLong " + isAnyNameLong);
+console.log(` ------------ Using .some() to check all values and when any return true then the function returns true.`);
+console.log(isAnyNameLong);
 
 // reduce method
 var numbers = [10, 20, 30];
