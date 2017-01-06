@@ -148,7 +148,7 @@ filteredProducts = products.filter(function(product) {
 console.log(` ------------ Using .filter() to check products and return curated list that meets the requirements.`);
 console.log(filteredProducts);
 
-console.log('------------ Using Find array helper -----------------------------------------------------------------------');
+console.log('------------ Using find array helper -----------------------------------------------------------------------');
 // Find Method
 var users = [
   {name:'Alex'},
@@ -207,6 +207,7 @@ var account = accounts.find(function(account) {
 console.log(` ------------ Using .find() to return the one that matched the checked value.`);
 console.log(account);
 
+console.log('------------ Using every & some array helpers --------------------------------------------------------------');
 // Every & Some Method
 var computers = [
     {name: "Apple", ram: 24},
@@ -227,9 +228,8 @@ for (var i = 0; i < computers.length; i++) {
         onlySomeComputersCanRunProgram = true;
     }
 }
-
-console.log(allComputersCanRunProgram);
-console.log(onlySomeComputersCanRunProgram);
+console.log(` ------------ Old ES5 way.`);
+console.log(allComputersCanRunProgram, onlySomeComputersCanRunProgram);
 
 allComputersCanRunProgram = computers.every(function(computer){
    return computer.ram > 16;
