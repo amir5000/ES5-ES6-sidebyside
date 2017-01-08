@@ -266,6 +266,7 @@ var isAnyNameLong = namesStrings.some(function(name){
 console.log(` ------------ Using .some() to check all values and when any return true then the function returns true.`);
 console.log(isAnyNameLong);
 
+console.log('------------ Using reduce array helper ---------------------------------------------------------------------');
 // reduce method
 var numbers = [10, 20, 30];
 var sum = 0;
@@ -275,13 +276,15 @@ for (var i = 0; i < numbers.length; i++) {
     sum += numbers[i];
 }
 
+console.log(` ------------ Old ES5 way.`);
 console.log(sum);
 
 sum = numbers.reduce(function(sum, number) {
     return sum + number;
 }, 0);
 
-console.log("reduce method: " +  sum);
+console.log(` ------------ Using .reduce() to return the sum of the number. Reduce stores a value that you can then do something with over and over again.`);
+console.log(sum);
 
 var primaryColors = [
     {color: "Red"},
@@ -295,6 +298,7 @@ previous = primaryColors.reduce(function(previous, primaryColor) {
     return previous;
 }, []);
 
+console.log(` ------------ Using Reduce to show how we can build up a new array as you loop through the original array.`);
 console.log(previous);
 
 //More practical example of reduce to solve balancedParens problem.
