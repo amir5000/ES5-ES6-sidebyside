@@ -311,6 +311,7 @@ function balancedParens(string) {
     }, 0);
 }
 
+console.log(` ------------ Using Reduce to loop over an array and how we can use the build in returned value to our advantage and see if a string is balanced.`);
 console.log(balancedParens("(())"));
 console.log(balancedParens(")("));
 
