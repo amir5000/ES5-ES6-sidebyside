@@ -329,6 +329,7 @@ var deskTypes = desks.reduce(function(previous, desk) {
     return previous;
 }, { sitting: 0, standing: 0 });
 
+console.log(` ------------ Using Reduce to loop over an array and count certain types of values to get sum of each one.`);
 console.log(deskTypes);
 
 var numbers = [1, 1, 2, 3, 4, 4];
@@ -342,13 +343,5 @@ function unique(array) {
   }, []);
 }
 
+console.log(` ------------ Using Reduce to loop over an array and create a new array without any repeated values.`);
 console.log(unique(numbers));
-
-
-
-
-
-
-
-
-
