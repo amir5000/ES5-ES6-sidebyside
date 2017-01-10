@@ -1,5 +1,10 @@
 console.log('------------ Object literals -------------------------------------------------------------------------------');
 
+const inventory = [
+    {title: 'Harry Potter', price: 10},
+    {title: 'Twilight', price: 15},
+];
+
 //ES5 way
 function createBookShop(invintory) {
     return {
@@ -13,15 +18,15 @@ function createBookShop(invintory) {
     };
 };
 
-const inventory = [
-    {title: 'Harry Potter', price: 10},
-    {title: 'Twilight', price: 15},
-]
+var bookShop = createBookShop(inventory);
+console.log(`------------ Using Old ES5 Object literal.`);
+console.log(bookShop.inventoryValue());
+console.log(bookShop.priceForTitle('Harry Potter'));
 
-const bookShop = createBookShop(inventory);
+
 
 //ES6 Object Literal
-function createBookShop(invintory) {
+function createBookShopEs6(invintory) {
     return {
         inventory,
         inventoryValue() {
@@ -33,5 +38,7 @@ function createBookShop(invintory) {
     };
 };
 
-console.log(bookShop.inventoryValue());
-console.log(bookShop.priceForTitle('Harry Potter'));
+const bookShopEs6 = createBookShopEs6(inventory);
+console.log(`------------ Using new ES6 syntax for Object literal.`);
+console.log(bookShopEs6.inventoryValue());
+console.log(bookShopEs6.priceForTitle('Harry Potter'));
