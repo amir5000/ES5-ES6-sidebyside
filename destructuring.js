@@ -25,3 +25,13 @@ function fileSummary({ name, extension, size }) {
 
 console.log('------------ Using destructuring on the passed in argument.');
 console.log(fileSummary(savedFile));
+
+const companies = [
+    'Google',
+    'Facebook',
+    'Uber'
+];
+
+const [ firstCompany, ...rest ] = companies;
+console.log('------------ Using destructuring on an array along with the rest operator to pull off the rest of the array.');
+console.log(firstCompany, rest);
