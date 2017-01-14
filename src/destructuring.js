@@ -35,3 +35,21 @@ const companies = [
 const [ firstCompany, ...rest ] = companies;
 console.log('------------ Using destructuring on an array along with the rest operator to pull off the rest of the array.');
 console.log(firstCompany, rest);
+
+const techCompanies = [
+    { name: 'Google', city: 'Mountain View' },
+    { name: 'Facebook', city: 'Menlo Park' },
+    { name: 'Uber', city: 'San Francisco' }
+];
+
+const [company1, { city }] = techCompanies;
+console.log('------------ Using destructuring to destructure an object inside an array.');
+console.log(city);
+
+const Google = {
+    locations: ['Mountain View', 'New York', 'London']
+};
+
+const { locations: [ locationCity ] } = Google;
+console.log('------------ Using destructuring to destructure an array inside of an object which is less common.');
+console.log(locationCity);
