@@ -53,3 +53,16 @@ const Google = {
 const { locations: [ locationCity ] } = Google;
 console.log('------------ Using destructuring to destructure an array inside of an object which is less common.');
 console.log(locationCity);
+
+const points = [
+    [4, 5],
+    [29, 18],
+    [48, 39]
+];
+
+const pairs = points.map( ([ x, y ]) => {
+    return { x, y };
+});
+
+console.log('------------ Using destructuring to create a new array of objects and assigning values to new keys.');
+console.log(pairs);
