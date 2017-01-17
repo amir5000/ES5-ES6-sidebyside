@@ -66,3 +66,12 @@ const pairs = points.map( ([ x, y ]) => {
 
 console.log('------------ Using destructuring to create a new array of objects and assigning values to new keys.');
 console.log(pairs);
+
+const numbersArray = [1, 2, 3];
+
+function doubleNumber([number, ...rest]) {
+    return !number ? [] : [number * 2, ...doubleNumber(rest)];
+}
+
+console.log('------------ Using destructuring & spread operator to keep returning the function as long as there are items in the array that are left.');
+console.log(doubleNumber(numbersArray));
