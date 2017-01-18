@@ -40,6 +40,20 @@ class CarNew {
     }
 }
 
+class ToyotaNew extends CarNew {
+    constructor(options) {
+        super(options);
+        this.color = options.color;
+    }
+    
+    honk() {
+        return 'beeeeep';
+    }
+}
+
 const newCar = new CarNew({ title: 'Mazda' });
 console.log('------------ Using class we can now keep all Car related logic in one constructor object.');
 console.log(newCar, newCar.drive());
+
+const newToyota = new ToyotaNew({ color: 'Green', title: 'Tacoma' });
+console.log(newToyota, newToyota.drive(), newToyota.honk());
