@@ -20,7 +20,11 @@ console.log(myColors);
 
 const testingTeam = {
     lead: 'Amanda',
-    tester: 'Bill'
+    tester: 'Bill',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.tester;
+    }
 }
 
 const engineeringTeam = {
@@ -29,24 +33,17 @@ const engineeringTeam = {
     department: 'Engineering',
     lead: 'Jill',
     manager: 'Alex',
-    engineer: 'Dave'
+    engineer: 'Dave',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.manager;
+        yield this.engineer;
+        yield* this.testingTeam;
+    }
 };
 
-function* TeamIterator(team) {
-    yield team.lead;
-    yield team.manager;
-    yield team.engineer;    
-    const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
-    yield* testingTeamGenerator;
-}
-
-function* TestingTeamIterator(team) {
-    yield team.lead;
-    yield team.tester;
-}
-
 const names = [];
-for (let name of TeamIterator(engineeringTeam)) {
+for (let name of engineeringTeam) {
     names.push(name);
 }
 
