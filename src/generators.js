@@ -6,7 +6,6 @@ function* colorsGen() {
     yield 'green';
 }
 
-//stuff in the store.
 const gen = colorsGen();
 
 const myColors = [];
