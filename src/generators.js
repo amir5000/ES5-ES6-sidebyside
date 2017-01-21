@@ -50,4 +50,5 @@ for (let name of TeamIterator(engineeringTeam)) {
     names.push(name);
 }
 
+console.log('------------ Using Generators and generator delegation to run two generators together.');
 console.log(names);
