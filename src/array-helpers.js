@@ -7,7 +7,7 @@ const colors = ['red', 'blue', 'green'];
 
 //old way
 for (var i = 0; i < colors.length; i++) {
-  console.log(`${colors[i]} - Using old for loop`);
+  console.log(colors[i] + " - Using old for loop");
 }
 
 //ES6 way
